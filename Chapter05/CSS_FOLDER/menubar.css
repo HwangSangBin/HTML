@@ -1,0 +1,54 @@
+ul{
+    list-style: none;
+}
+
+#hmenu{
+    padding-top: 100px;             /* 안쪽의 간격을 조율할 때 사용 */
+    padding-left: 150;
+    border: 2px double blue;
+}
+
+#horizon_menu > li{
+    display: inline-block;
+    width: 120px;
+    height: 30px;
+    background-color: black;
+    text-align: center;
+    margin-right: 50px;
+    border: 2px solid blue;
+}
+
+#horizon_menu > li > a{
+    display: inline-block;
+    width: 100%; /* 부모의 크기를 따라감 */
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#horizon_menu li a:hover{
+    background-color: white;
+    color: black;
+}
+
+#vertical_menu > li{
+    width: 120px;
+    height: 30px;
+    background-color: rgb(50, 210, 50);
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border: 2px solid greenyellow;
+}
+
+#vertical_menu > li > a{
+    display: inline-block;
+    width: 100%; /* 부모의 크기를 따라감 */
+    height: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}

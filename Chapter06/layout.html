@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <link rel="stylesheet" href="./deco.css">
+</head>
+<body>
+    <div id="main">
+        <div id="header">
+            <a href="#" onclick="javascript:alert('이미지가 클릭되었습니다.')"><img src ="image1.jpg" width="1200" height="300"></a>
+        </div>
+        <div id ="left">
+            <ul id="menu" style="list-style: none">
+                <li>
+                    <a href="http://www.naver.com">Naver</a>
+                </li>
+                
+                <li>
+
+                    <a href="http://www.google.com">Google</a>
+                </li>
+                <li>
+                    <a href="http://www.daum.net">Daum</a>
+                </li>
+                <li>
+                    <a href="http://www.zum.com">ZUM</a>
+                </li>
+            </ul>
+        </div>
+        <div id="content">
+            <h2>회원가입</h2>
+                <pre>
+이름:     <input name="name" placeholder="이름을 입력해주세요"><br>
+학번:     <input name="student_number" placeholder="학번을 입력해주세요"><br>
+비밀번호: <input name="password" type="password" placeholder="비밀번호를 입력해주세요"><br>
+생년월일: <input name="birth" type="date"><br>
+자기소개</pre>
+                <textarea rows="10" cols="30" name="introduce" placeholder="자기소개를 입력해주세요"></textarea><br>
+                <input type = "submit" value = "확인"><input type = "reset" value = "리셋"><br>
+        </div>
+        <div id="right">
+            <ul style="list-style: square;">
+                <li>자료구조 과제 프린트</li><br>
+                <li>수요일 이산수학 수시고사</li><br>
+                <li>목요일 선형대수학 수시고사</li><br>
+                <li>유닉스기초 가상머신 설치</li><br>
+            </ul>
+        </div>
+        <div id="footer">
+            <a href="#" onclick="javascript:alert('도움말')">도움말</a>  |   
+            <a href="#" onclick="javascript:alert('개인정보')">개인정보</a>  |   
+            <a href="#" onclick="javascript:alert('약관')">약관</a><br>
+            만든이: 황상빈
+
+        </div>
+    </div>
+    
+</body>
+</html>

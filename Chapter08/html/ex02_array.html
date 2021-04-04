@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {    // html의 문서를 모두 로드했을 때 실행해라.
+            var city_array = ["서울", "부산", "대구", "대전"];
+            var select = document.getElementById("cities");
+            for(var i = 0; i < city_array.length; i++){
+                select.innerHTML = select.innerHTML + "<option>" + city_array[i] + "</option>"
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <select id="cities">
+        <option>::선택하시오::</option>
+    </select>
+
+</body>
+</html>

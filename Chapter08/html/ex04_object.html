@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Car() {        // 클래스
+            var msg = "";
+            this.name = "asd";
+            this.getName = function() {
+                return this.name;
+            }
+            this.setName = function(name) {
+                this.name = name;
+            }
+        }
+        var myCar = new Car();
+        myCar.setName("지바겐");
+
+        console.log(myCar.getName());
+
+        // JSON
+        var product = {     // 객체
+            name: "컴퓨터",
+            price: "1000$",
+            show:function() {
+                console.log("품명: " + this.name + " 가격: " + this.price);     // 함수 안에서 멤버변수를 접근하므로 this를 붙여줘야한다.
+            }
+        }
+        product.show();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

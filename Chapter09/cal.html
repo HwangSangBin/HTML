@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script language="javascript">
+    var expression="";
+    var display;
+
+    window.onload=function() {
+        display=document.getElementById("display");
+    }
+    function add(ch) {
+        expression += ch;
+        display.value=expression;
+    }
+    function clearDisplay() {
+        expression="";
+        display.value=expression;
+    }
+    function compute() {
+        display.value=eval(expression); //eval은 문자열을 자바스크립트를 통해 계산 가능함
+        expression="";
+    }
+    function tan(expression) {
+       expression.value = Math.tan((expression.value * 3.14) / 180);
+     }
+     function sin(expression) {
+       expression.value = Math.sin((expression.value * 3.14) / 180);
+     }
+     function cos(expression) {
+       expression.value = Math.cos((expression.value * 3.14) / 180);
+     }
+    
+</script>
+<style>
+    input[type="text"] {
+        width:243px;
+        text-align:right; /*오른쪽 정렬*/
+        padding-right:10px /*오른쪽에서 10px 떨어짐*/
+    }
+
+    input[type="button"] {
+        margin-top:5px; /*위의 것과 5px떨어짐*/
+        width:60px;
+        height:30px;
+    }
+</style>
+
+<body>
+    <input type="text" id="display" value="" readonly><br>
+    <input type="button" value="PI" onclick="add('3.14')">
+    <input type="button" value="sin" onclick="sin(display)">
+    <input type="button" value="cos" onclick="cos(display)">
+    <input type="button" value="tan" onclick="tan(display)"><br>
+    
+    <input type="button" value="e" onclick="add('7')">
+    <input type="button" value="|x|" onclick="add('8')">
+    <input type="button" value="root(x)" onclick="add('9')">
+    <input type="button" value="mod" onclick="add('/')"><br>
+
+    <input type="button" value="7" onclick="add('7')">
+    <input type="button" value="8" onclick="add('8')">
+    <input type="button" value="9" onclick="add('9')">
+    <input type="button" value="/" onclick="add('/')"><br>
+
+    <input type="button" value="4" onclick="add('4')">
+    <input type="button" value="5" onclick="add('5')">
+    <input type="button" value="6" onclick="add('6')">
+    <input type="button" value="*" onclick="add('*')"><br>
+
+    <input type="button" value="1" onclick="add('1')">
+    <input type="button" value="2" onclick="add('2')">
+    <input type="button" value="3" onclick="add('3')">
+    <input type="button" value="-" onclick="add('-')"><br>
+
+    <input type="button" value="0" onclick="add('0')">
+    <input type="button" value="." onclick="add('.')">
+    <input type="button" value=")" onclick="add(')')">
+    <input type="button" value="+" onclick="add('+')"><br>
+
+    <input type="button" value="clear" onclick="clearDisplay()" style="width: 125px;">
+    <input type="button" value="enter" onclick="compute()" style="width: 125px;">
+
+</body>
+</html>

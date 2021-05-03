@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>make_name</title>
+    <script>
+        window.onload = function() {
+            var first = ["뒤돌아보는", "은은한 자스민향인", "차분한 달콤한", "싱그러운", "평범하지 않은", "발걸음이 가볍게", "달콤한", "레몬라임처럼 상큼한", "진짜장미같은 ", "우아한 네롤리향인"];
+            var second = ["더티", "섹스밤", "트와일라잇", "코코 로코", "롤러", "플라잉 폭스", "더 컴포터", "대드스 가든 레몬 트리", "로즈 잼", "빅"];
+
+            var first_name = document.getElementById("first_name");
+            var second_name = document.getElementById("second_name");
+
+            for(var i = 0; i < first.length; i++)
+                first_name.innerHTML += "<option>" + first[i] + "</option>";
+            for(var i = 0; i < second.length; i++)
+               second_name.innerHTML += "<option>" + second[i] + "</option>";
+
+            var make_int = Math.floor(Math.random() * 100);
+            document.make_name.random_int.value = make_int;
+        }
+    </script>
+</head>
+<body>
+    닉네임 생성<br>
+    <form name = "make_name" action="../jsp/result.jsp" method="GET">
+        <select id = "first_name" name="first_name">
+            <option>선택1</option>
+        </select>
+        <select id = "second_name" name="second_name">
+            <option>선택2</option>
+        </select>
+        <input type="hidden" name="random_int", value="">
+        <input type="submit" value="생성">
+    </form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            // id라는 속성으로 태그에 접근
+            // id는 중복을 허용하지 않아서 고유한 값을 사용해야한다.
+            // 만약 중복해서 사용했다면 나중에 사용한 태그에만 id 속성이 활성화된다.
+
+            // var song = document.getElementById("song");
+            // console.log(song);
+            // console.log(song.innerHTML);
+
+            // 태그 이름으로 요소에 접근
+
+            // var p_tags = document.getElementsByTagName("p");
+            // for(var i = 0; i<p_tags.length; i++){
+            //    console.log(p_tags[i].innerHTML);
+           // }
+
+           // name 속성을 이용하여 요소에 접근
+
+           // var songs = document.getElementsByName("song");
+           // for(var i = 0; i < songs.length; i++){
+           //    console.log(songs[i].innerHTML);
+           // }
+
+           // class 속성을 이용하여 요소에 접근
+           var eights = document.getElementsByClassName("eight");
+           for(var i = 0; eights.length; i++){
+               console.log(eights[i].innerHTML);
+           }
+        }
+    </script>
+</head>
+<body>
+    <p id="song" class="eight">
+        동해물과 백두산이
+    </p>
+    <p id="song" class="eight">
+        마르고 닳도록
+    </p>
+    <p name="song" class="eight">
+        하느님이 보우하사
+    </p>
+    <p name="song">
+        우리나라 만세
+    </p>
+</body>
+</html>

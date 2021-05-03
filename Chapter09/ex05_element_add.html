@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addtext() {
+
+            // var node = document.createTextNode("텍스트 추가");
+            // document.getElementById("target").append(node);
+
+            //document.getElementById("target").innerText += " 텍스트 추가";
+
+            var input = document.createElement("input");
+            input.type = "range";
+            input.style.display = "block";
+            document.getElementById("target").appendChild(input);
+        }
+    </script>
+</head>
+<body>
+    <div id="target" onclick="addtext()">
+        여기 클릭
+
+    </div>
+</body>
+</html>

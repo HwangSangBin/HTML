@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fontsizeUp() {
+            var p_arr = document.getElementsByTagName("p");
+            for(var i = 0; i < p_arr.length; i++){
+                p_arr[i].style.fontSize = "20px";
+                p_arr[i].style.color = "red";
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <p>
+        동해물과 백두산이
+    </p>
+    <p>
+        마르고 닳도록
+    </p>
+    <p>
+        하느님이 보우하사
+    </p>
+    <p>
+        우리나라 만세
+    </p>
+
+    <input type="button" value ="클릭" onclick = "fontsizeUp()";>
+    
+</body>
+</html>

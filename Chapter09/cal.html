@@ -34,7 +34,12 @@
      function cos(expression) {
        expression.value = Math.cos((expression.value * 3.14) / 180);
      }
-    
+     function abs(expression) {
+         expression.value = Math.abs((expression.value));
+     }
+     function sqrt(expression) {
+         expression.value = Math.sqrt(expression.value);
+     }
 </script>
 <style>
     input[type="text"] {
@@ -57,9 +62,9 @@
     <input type="button" value="cos" onclick="cos(display)">
     <input type="button" value="tan" onclick="tan(display)"><br>
     
-    <input type="button" value="e" onclick="add('7')">
-    <input type="button" value="|x|" onclick="add('8')">
-    <input type="button" value="root(x)" onclick="add('9')">
+    <input type="button" value="e" onclick="add('2.71')">
+    <input type="button" value="|x|" onclick="abs(display)">
+    <input type="button" value="root(x)" onclick="sqrt(display)">
     <input type="button" value="mod" onclick="add('/')"><br>
 
     <input type="button" value="7" onclick="add('7')">

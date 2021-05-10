@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // 요소 추가, 삭제
+
+        // 요소 생성
+        var my_h1 = $("<h1>").text("새로 생성된 h1태그");
+        // 자식 요소로 추가
+        $('body').append(my_h1);
+        $('body').prepend("<h2>jQuery로 DOM 조작 start</h2>");
+        $('body').append("<h2>jQuery로 DOM 조작 end</h2>");
+        // 형제 요소로 추가
+        $('#p2').before("<h2>jQuery로 DOM 조작 middle1</h2>");        // #은 id 선택자
+        $('#p2').after("<h2>jQuery로 DOM 조작 middle2</h2>");
+
+        // 내용 변경 - 일반 Js에서는 innerHTML = 
+        $('#p1').html("<h3>동해물과 백두산이</h3>");
+        $('#p2').text("<h3>마르고 닳도록</h3>");
+
+        // 속성 추가
+        $('#p1').attr("style", "color: red");
+        // $('#p1').css("style", "color: red");       서로 같다.
+        $('#p2').attr({"onclick": "alert('속성 변경1')", 
+                         "onmouseover": "console.log('속성 변경2')"
+                        });
+        // 스타일 추가
+        $('#p3').css("background-color", "blue");
+        $('#p4').css({"border": "1px solid green", "font-family": "굴림"});
+        $("#p3, #p4").addClass("my_class");
+        $(".my_class").css("font-size", "20pt");
+
+        // 애니메이션
+    });
+    // 요소 삭제
+
+    // 자기자신 요소 + 자식 요소 모두 삭제(reomove)
+    function removeFooter() {
+    $('#footer').remove();
+    }
+    // 자식 요소만 삭제(empty)
+    function emptyFooter() {
+        $('#footer').empty();
+    }
+
+    // Basic 효과
+    function hide_p1() {
+        $('#p1').hide();
+    }
+
+    function show_p1() {
+        $('#p1').show();
+    }
+
+    function toggle_p1() {
+        $('#p1').toggle();
+    }
+
+    function toggle_p2() {
+        $('#p2').toggle();
+    }
+
+    // Fade 효과
+    function fadeOut_baby() {
+        $('#baby').fadeOut(2000);
+    }
+    function fadeIn_baby() {
+        $('#baby').fadeIn(2000);
+    }
+    function fadeToggle_baby() {
+        $('#baby').fadeToggle(2000);
+    }
+    function fadeTo_baby() {
+        $('#baby').fadeTo(2000, "0.5");
+    }
+</script>
+</head>
+<body>
+    <p id="p1">p1입니다.</p>
+    <p id="p2">p2입니다.</p>
+    <p id="p3">p3입니다.</p>
+    <p id="p4">p4입니다.</p>
+
+    <div id="footer" style="height: 100px; border: 1px soild blue">
+        <span>학교종이</span>
+        <span>떙땡땡</span>
+    </div>
+    <input type="button" value=remove() onclick="removeFooter()">
+    <input type="button" value=empty() onclick="emptyFooter()">
+
+    <!-- Basic 효과-->
+    <input type="button" value="p1_hide" onclick="hide_p1()">
+    <input type="button" value="p1_show" onclick="show_p1()">
+    <input type="button" value="p1_toggle" onclick="toggle_p1()">
+    <input type="button" value="p2_toggle" onclick="toggle_p2()"><br><br>
+
+    <!-- fade 효과-->
+    <img id="baby" src="./img/baby.jpg"><br>
+    <input type="button" value="fadeOut" onclick="fadeOut_baby()">
+    <input type="button" value="fadeIn" onclick="fadeIn_baby()">
+    <input type="button" value="fadeToggle" onclick="fadeToggle_baby()">
+    <input type="button" value="fadeTo" onclick="fadeTo_baby()">
+</body>
+</html>

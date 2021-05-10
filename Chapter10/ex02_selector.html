@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style>
+    li{
+        list-style: "none";
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        
+    });
+
+    $(function () {
+       // tag 선택자
+       $("li").css("list-style", "none");       // 위에 style과 같은 코드
+       // class 선택자
+       $(".abc").css("color", "blue");
+       // title 선택자
+       $("[title]").css("text-decoration", "underline");
+       $("[title = '2']").text("보오우우하아사아");
+       // id 선택자
+       $("#my").css("margin-left", "10px", "margin-bottom", "30px", "margin", "30px");
+       // 의사클래스
+       $(":hover").css("font-weight", "bold");
+       // 자식 관계
+       $("li > table").css("border", "2px solid aqua");
+       $("li td").css("border", "2px solid red");
+       // 선택자 조합
+       $("p.abc").css("font-family", "궁서체");
+       // 다수 선택자
+       $("td, p").css("background-color", "pink");
+    });
+</script>
+</head>
+<body>
+    <ul>
+        <li class="zzz">동해물과</li>
+        <li class="abc">백두산이</li>
+        <li class="abc">마르고</li>
+        <li class="abc">닳도록</li>
+        <li title="1">하느님이</li>
+        <li title="2">보우하사</li>
+        <li id="my">우리나라</li>
+        <li>만세</li>
+        <li>
+            <table>
+                <tr>
+                    <td>무궁화 삼천리 화려강산</td>
+                </tr>
+            </table>
+        </li>
+    </ul>
+    <p class="abc">
+        대한사람 대한으로
+    </p>
+    <p>
+        길이 보전하세
+    </p>
+</body>
+</html>

@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <title></title>
 <style>
+    #login{
+        border: 1px solid black;
+        width: 30px;
+        height: 80px;
+        display: none;
+        align: "center";
+    }
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
@@ -49,7 +56,7 @@
         $('#footer').empty();
     }
 
-    // Basic 효과
+    // Basic Effect
     function hide_p1() {
         $('#p1').hide();
     }
@@ -66,7 +73,7 @@
         $('#p2').toggle();
     }
 
-    // Fade 효과
+    // Fade Effect
     function fadeOut_baby() {
         $('#baby').fadeOut(2000);
     }
@@ -78,6 +85,28 @@
     }
     function fadeTo_baby() {
         $('#baby').fadeTo(2000, "0.5");
+    }
+
+    // Slide Effect
+    function slideToggle_login() {
+        $('#login').slideToggle(1000, function () {
+           if($("#Toggle_login").val() == "로그인"){
+                $("#Toggle_login").val("취소");
+           }
+           else{
+                $("#Toggle_login").val("로그인");
+           }
+        });
+    }
+
+    // Anymation Effect
+    function moveLeft_photo() {
+        $("#photo").animate({"margin-left": "0px", opacity: 1});
+    }
+    function moveRight_photo() {
+        $("#photo").animate({"margin-left": "500px", opacity: 0.5}, 2000, function () {
+            console.log("오른쪽으로 이동");
+        });
     }
 </script>
 </head>
@@ -94,17 +123,46 @@
     <input type="button" value=remove() onclick="removeFooter()">
     <input type="button" value=empty() onclick="emptyFooter()">
 
-    <!-- Basic 효과-->
+    <!-- Basic Effect-->
     <input type="button" value="p1_hide" onclick="hide_p1()">
     <input type="button" value="p1_show" onclick="show_p1()">
     <input type="button" value="p1_toggle" onclick="toggle_p1()">
     <input type="button" value="p2_toggle" onclick="toggle_p2()"><br><br>
 
-    <!-- fade 효과-->
+    <!-- Fade Effect-->
     <img id="baby" src="./img/baby.jpg"><br>
     <input type="button" value="fadeOut" onclick="fadeOut_baby()">
     <input type="button" value="fadeIn" onclick="fadeIn_baby()">
     <input type="button" value="fadeToggle" onclick="fadeToggle_baby()">
-    <input type="button" value="fadeTo" onclick="fadeTo_baby()">
+    <input type="button" value="fadeTo" onclick="fadeTo_baby()"><br><br>
+
+    <!-- Slide Effect-->
+    <div id="login">
+        <table border = "1" style = "border-collapse: collapse;">
+            <tr>
+                <th>아이디</th>
+                <td>
+                    <input name="id">
+                </td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td>
+                    <input type="password" name="id">
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">
+                    <input type="button" value="로그인">
+                </td>
+            </tr>
+        </table>
+    </div><br>
+    <input id ="Toggle_login" type="button" value="로그인" onclick="slideToggle_login()"><br><br>
+
+    <!-- Anymation Effect-->
+    <img id="photo" src="./img/photo.jpg"><br>
+    <input type="button" value="moveLeft" onclick="moveLeft_photo()">
+    <input type="button" value="moveRight" onclick="moveRight_photo()">
 </body>
 </html>

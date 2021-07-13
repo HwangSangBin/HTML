@@ -19,8 +19,6 @@ public class LoginFormServlet extends HttpServlet {
 	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/login/form.jsp").forward(request, response);
-		
+		request.getRequestDispatcher("/login/form.jsp").forward(request, response);	
 	}
-
 }

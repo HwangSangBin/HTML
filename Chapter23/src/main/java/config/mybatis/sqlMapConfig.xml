@@ -6,7 +6,7 @@
 <typeAliases>
 	<!--  객체의 별칭을 부여할 때 사용 -->
 	<typeAlias type="java.util.HashMap" alias = "HashMap"/>
-	<typeAlias type="vo.EmployeeVo" alias ="EmpVo]"/>
+	<typeAlias type="vo.EmployeeVo" alias ="EmpVo"/>
 </typeAliases>
   <environments default="">
     <environment id="">

@@ -1,29 +1,26 @@
 package vo;
 
 public class EmployeeVo {
-	private String employee_id, first_name, department_id;
-
-	public String getEmployee_id() {
-		return employee_id;
+	private int emp_id;
+	private String fir_name, dept_id;
+	private DepartmentVo dvo;
+	
+	public int getEmp_id() {
+		return emp_id;
 	}
-
-	public void setEmployee_id(String employee_id) {
-		this.employee_id = employee_id;
+	public void setEmp_id(int emp_id) {
+		this.emp_id = emp_id;
 	}
-
-	public String getFirst_name() {
-		return first_name;
+	public String getFir_name() {
+		return fir_name;
 	}
-
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
+	public void setFir_name(String fir_name) {
+		this.fir_name = fir_name;
 	}
-
-	public String getDepartment_id() {
-		return department_id;
+	public String getDept_id() {
+		return dept_id;
 	}
-
-	public void setDepartment_id(String department_id) {
-		this.department_id = department_id;
+	public void setDept_id(String dept_id) {
+		this.dept_id = dept_id;
 	}
 }

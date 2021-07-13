@@ -25,6 +25,10 @@ public class EmployeeServlet extends HttpServlet {
 	 */
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<EmployeeVo> emp_list = EmployeeDao.getInstance().selectList();
-	}
 
+		for(EmployeeVo evo : emp_list){
+			System.out.printf("아이디 : %d, 이름 : %s, 부서아이디 : %s", evo.getEmp_id(), evo.getFir_name(), evo.getDept_id());
+			System.out.println();
+		}
+	}
 }
